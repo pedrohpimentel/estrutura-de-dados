@@ -1,8 +1,12 @@
-package TADPILHA;
+package estruturasLineares;
 
-public class TadPilha {
+/**
+ * Classe representativa da estrutura de dados PILHA.
+ * <br>Funcionalidades minimalistas - vide javadoc.
+ */
+public class TadPilhaEstruturaLinear {
 
-    public TadPilha(int tam) {
+    public TadPilhaEstruturaLinear(int tam) {
         this.tamanho = tam;
         this.topo = -1;
         this.pilha = new int[tam];
@@ -95,4 +99,18 @@ public class TadPilha {
         }
         return ret;
     }
+
+    /**
+     * Ler uma posicao da pilha.
+     *
+     * @param indice
+     * @return
+     */
+    public int read(int indice) {
+        if (indice > this.topo) {
+            return -1;
+        }
+        return pilha[indice];
+    }
+
 }
